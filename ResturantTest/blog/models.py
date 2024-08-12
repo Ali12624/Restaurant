@@ -1,7 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth import get_user_model
-from ckeditor.fields import RichTextField
+# from ckeditor.fields import RichTextField
 
 # Create your models here.
 
@@ -11,7 +11,7 @@ class Blog(models.Model):
     author = models.CharField(max_length=50)
     title = models.CharField(max_length=50)
     description = models.CharField(max_length=100)
-    content = RichTextField()
+    content = models.TextField()
     time = models.DateTimeField(default=timezone.now)
     image = models.ImageField(
         upload_to="blog/",
