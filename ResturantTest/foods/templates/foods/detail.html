@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{food.name}}</title>
+</head>
+<body>
+    {% block content %}
+    <br><br><br><br><br><br>
+    <img src="{{food.photo.url}}">
+    <li>{{food.name}}</li>
+    <li>{{food.price}}</li>
+    <li>{{food.description}}</li>
+   
+    {% endblock content %}
+</body>
+</html>
