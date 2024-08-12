@@ -1,0 +1,15 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foods</title>
+</head>
+<body>
+    <ul>
+        {% for food in foods %}
+        <a href="{% url 'food' food.id %}"><li>{{food}}</li></a>
+        {% endfor %}
+    </ul>
+</body>
+</html>
